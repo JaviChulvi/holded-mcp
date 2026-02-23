@@ -1,0 +1,16 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "holded-mcp"
+version = "0.1.0"
+description = "MCP server for the Holded REST API"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]>=1.0",
+    "httpx",
+]
+
+[project.scripts]
+holded-mcp = "holded_mcp.server:main"
